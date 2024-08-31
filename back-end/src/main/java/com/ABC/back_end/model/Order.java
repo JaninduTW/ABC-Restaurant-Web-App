@@ -19,6 +19,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+
     @ManyToOne // Many orders can be created by one customer (Relationship between Order table and User table)
     private User customer;
 
