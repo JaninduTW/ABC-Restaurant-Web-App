@@ -1,9 +1,6 @@
 package com.ABC.back_end.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +18,12 @@ public class Orderitem {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @ManyToOne //Many order items can have same food (Relationship between Orderitem table and Food table)
+    private Food food;
 
+    private int quantity;
 
+    private Long totalPrice;
+
+    //private List<String> ingredients;
 }
