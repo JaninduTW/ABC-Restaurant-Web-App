@@ -21,5 +21,7 @@ public class Restaurant {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    
+    private User owner;
 
 }
